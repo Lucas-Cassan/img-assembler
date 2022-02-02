@@ -1,6 +1,7 @@
 const multer = require("multer");
 
 exports.mergeImage = async (req, res, next) => {
+  // console.log(Buffer.from(req.file, "base64"));
   let storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, "public");
