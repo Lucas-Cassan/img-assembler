@@ -39,28 +39,31 @@ const Fusiooooon = () => {
 
   return (
     <>
-      <form action="" onSubmit={handleSubmit}>
-        <label htmlFor="">Image 1 : </label>
-        <input
-          type="file"
-          name="file"
-          id="file"
-          accept=".jpg, .jpeg, .png"
-          onChange={(e) => setFile1(e.target.files[0])}
-        />
-        <input type="submit" value="enregistrer" />
-        <label htmlFor="">Image 2 : </label>
-      </form>
-      <form action="" onSubmit={handleSubmit2}>
-        <input
-          type="file"
-          name="file"
-          id="file"
-          accept=".jpg, .jpeg, .png"
-          onChange={(e) => setFile2(e.target.files[0])}
-        />
-        <input type="submit" value="enregistrer" />
-      </form>
+      <div id="image"></div>
+      <div id="form">
+        <form action="" onSubmit={handleSubmit}>
+          <label htmlFor="image1">Image 1</label>
+          <input
+            type="file"
+            name="image1"
+            id="image1"
+            accept=".jpg, .jpeg, .png"
+            onChange={(e) => setFile1(e.target.image1[0])}
+          />
+          <input type="submit" value="enregistrer" />
+        </form>
+        <form action="" onSubmit={handleSubmit2}>
+          <label htmlFor="image2">Image 2</label>
+          <input
+            type="file"
+            name="image2"
+            id="image2"
+            accept=".jpg, .jpeg, .png"
+            onChange={(e) => setFile2(e.target.image2[0])}
+          />
+          <input type="submit" value="enregistrer" />
+        </form>
+      </div>
     </>
   );
 };
