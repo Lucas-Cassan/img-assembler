@@ -42,7 +42,7 @@ const Fusiooooon = () => {
 
       <div id="image"></div>
       <div id="form">
-        <form action="" onSubmit={handleSubmit}>
+        <form action="">
           <label htmlFor="image1">Image 1</label>
           <input
             type="file"
