@@ -4,7 +4,7 @@ const cors = require("cors");
 
 // MongoDb + Dotenv
 require("dotenv").config({ path: "./config/.env" });
-require("./config/db");
+// require("./config/db");
 
 // Routes
 const imgRoute = require("./routes/image.route");
@@ -14,7 +14,7 @@ const app = express();
 
 // Cors
 const corsOptions = {
-  origin: process.env.CLIENT_URL,
+  origin: true,
   credentials: true,
   allowedHeaders: ["sessionId", "Content-Type"],
   exposedHeaders: ["sessionId"],
