@@ -1,7 +1,4 @@
 const multer = require("multer");
-const fs = require("fs");
-const { promisify } = require("util");
-const pipeline = promisify(require("stream").pipeline);
 
 exports.mergeImage = async (req, res, next) => {
   let storage = multer.diskStorage({
