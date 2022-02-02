@@ -9,18 +9,29 @@ const Fusiooooon = () => {
     e.preventDefault();
 
     console.log(file1);
-    const data1 = new FormData();
-    data1.append("file", file1);
-    const data2 = new FormData();
-    data2.append("file", file2);
+    const data = new FormData();
+    data.append("file", file1);
 
     axios({
       method: "post",
       url: `http://localhost:5000/img/merge`,
-      data: {
-        data1,
-        data2,
-      },
+      data,
+    })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
+  const handleSubmit2 = (e) => {
+    e.preventDefault();
+
+    console.log(file1);
+    const data = new FormData();
+    data.append("file", file2);
+
+    axios({
+      method: "post",
+      url: `http://localhost:5000/img/merge`,
+      data,
     })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -38,6 +49,8 @@ const Fusiooooon = () => {
           onChange={(e) => setFile1(e.target.files[0])}
         />
         <label htmlFor="">Image 2 : </label>
+      </form>
+      <form action="" onSubmit={handleSubmit2}>
         <input
           type="file"
           name="file"
