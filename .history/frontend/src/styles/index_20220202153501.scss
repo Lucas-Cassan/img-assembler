@@ -43,18 +43,14 @@ html{
                     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
                     cursor: pointer;
                     margin: 10px;
-                    padding: 10px 20px;
+                    padding: 10px 15px;
                     font-size: 1.2em;
                     background-color: #548CFF;
                     color: white;
                     border-radius: 5px;
                     font-family: 'Roboto', sans-serif;
                     text-transform: uppercase;
-                    transition: all .3s ease-in-out;
                 
-                    &:hover{
-                        background-color: #4578dd;
-                    }
                 }
             }
         }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 html {
   padding: 0;
   margin: 0;
@@ -42,6 +43,7 @@ html body #root #image {
 }
 
 html body #root #form {
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +54,6 @@ html body #root #form {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: auto;
 }
 
 html body #root #form input {
@@ -60,14 +61,22 @@ html body #root #form input {
 }
 
 html body #root #form label {
-  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   cursor: pointer;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 1.2em;
-  background-color: #FF6464;
+  background-color: #548CFF;
   color: white;
   border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+html body #root #form label:hover {
+  background-color: #4578dd;
 }
 /*# sourceMappingURL=index.css.map */
