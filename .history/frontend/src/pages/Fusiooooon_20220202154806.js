@@ -53,7 +53,7 @@ const Fusiooooon = () => {
           />
           <input type="submit" value="enregistrer" />
         </form>
-        <form action="" >
+        <form action="">
           <label htmlFor="image2">Image 2</label>
           <input
             type="file"
