@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import mergeImages from 'merge-images';
+import body from "../img/body.png";
+import eyes from '../img/eyes.png';
+import mouth from '../img/mouth.png';
 
 const Fusiooooon = () => {
   const [file1, setFile1] = useState();
   const [file2, setFile2] = useState();
-
+console.log(file1)
+useEffect(()=>{
+    if(file1!=undefined && file2!=undefined){
+      if(file1.name && file2.name){
+        mergeImages([{src:body}, {src:eyes}, {src:mouth}])
+        .then((b64) => document.getElementById('img').src = b64);
+      }
+    }
+  })
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(file1);
     const data = new FormData();
     data.append("file", file1);
 
@@ -21,6 +32,7 @@ const Fusiooooon = () => {
       .catch((err) => console.log(err));
   };
 
+  console.log(document.getElementById('img').src)
   const handleSubmit2 = (e) => {
     e.preventDefault();
 
@@ -61,6 +73,9 @@ const Fusiooooon = () => {
         />
         <input type="submit" value="enregistrer" />
       </form>
+      <div id="image">
+        <img id="img" alt='tomerge'/>
+      </div>
     </>
   );
 };
