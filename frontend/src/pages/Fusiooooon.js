@@ -48,7 +48,6 @@ const Fusiooooon = () => {
           accept=".jpg, .jpeg, .png"
           onChange={(e) => setFile1(e.target.files[0])}
         />
-        <input type="submit" value="enregistrer" />
         <label htmlFor="">Image 2 : </label>
       </form>
       <form action="">
@@ -59,7 +58,6 @@ const Fusiooooon = () => {
           accept=".jpg, .jpeg, .png"
           onChange={(e) => setFile2(e.target.files[0])}
         />
-        <input type="submit" value="enregistrer" />
       </form>
       <div id="image">
         <img id="img" alt="tomerge" />
