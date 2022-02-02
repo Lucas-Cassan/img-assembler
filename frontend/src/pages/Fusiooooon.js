@@ -19,6 +19,7 @@ const Fusiooooon = () => {
           (b64) => (document.getElementById("img").src = b64),
         );
         setFusion(document.getElementById("img").src);
+        console.log(document.getElementById("img").src);
       }
     }
   }, [file1, file2]);
@@ -26,7 +27,7 @@ const Fusiooooon = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData();
-    data.append("file", fusion);
+    data.append("file", file1);
 
     axios({
       method: "post",
@@ -39,7 +40,7 @@ const Fusiooooon = () => {
 
   return (
     <>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <label htmlFor="">Image 1 : </label>
         <input
           type="file"
@@ -48,9 +49,9 @@ const Fusiooooon = () => {
           accept=".jpg, .jpeg, .png"
           onChange={(e) => setFile1(e.target.files[0])}
         />
-        <label htmlFor="">Image 2 : </label>
       </form>
       <form action="">
+        <label htmlFor="">Image 2 : </label>
         <input
           type="file"
           name="file"
