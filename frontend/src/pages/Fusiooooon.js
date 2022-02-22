@@ -21,6 +21,7 @@ const Fusiooooon = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     mergeImages([{ src: file1 }, { src: file2 }]).then((b64) => {
       setImgSrc(b64);
       console.log(b64);
@@ -43,7 +44,7 @@ const Fusiooooon = () => {
         </Draggable>
       </div>
       <div id="form">
-        <form action="" onSubmit={handleSubmit}>
+        <form action="">
           <label htmlFor="image1">Image 1</label>
           <input
             type="file"
