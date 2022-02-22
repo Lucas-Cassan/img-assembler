@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import mergeImages from "merge-images";
-import body from "../img/body.png";
-import eyes from "../img/eyes.png";
-import mouth from "../img/mouth.png";
-import Draggable from 'react-draggable';
+import Draggable from "react-draggable";
 
 const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
@@ -13,25 +10,21 @@ const Fusiooooon = () => {
 
   const onImageChange1 = (event) => {
     if (event.target.files && event.target.files[0]) {
-      setFile1(URL.createObjectURL(event.target.files[0]))
+      setFile1(URL.createObjectURL(event.target.files[0]));
     }
-   }
+  };
 
-
-   const onImageChange2 = (event) => {
+  const onImageChange2 = (event) => {
     if (event.target.files && event.target.files[0]) {
-      setFile2(URL.createObjectURL(event.target.files[0]))
+      setFile2(URL.createObjectURL(event.target.files[0]));
     }
-   }
+  };
 
   const handleSubmit = (e) => {
-    mergeImages([{ src: file1 }, { src: file2 }]).then(
-              (b64) => {
-                setImgSr(b64);
-                console.log(b64)
-              },
-    ) 
-
+    mergeImages([{ src: file1 }, { src: file2 }]).then((b64) => {
+      setImgSrc(b64);
+      console.log(b64);
+    });
 
     axios({
       method: "post",
@@ -45,13 +38,9 @@ const Fusiooooon = () => {
   return (
     <>
       <div id="image">
-      <Draggable
-          defaultPosition={{ x: 0, y: 0 }}
-          position={null}
-        >
+        <Draggable defaultPosition={{ x: 0, y: 0 }} position={null}>
           <img src={imgSrc} alt="" className="img" />
-           </Draggable>
-        
+        </Draggable>
       </div>
       <div id="form">
         <form action="" onSubmit={handleSubmit}>
