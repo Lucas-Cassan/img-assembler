@@ -5,8 +5,8 @@ import Draggable from "react-draggable";
 
 const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
-  const [file1, setFile1] = useState();
-  const [file2, setFile2] = useState();
+  const [file1, setFile1] = useState(null);
+  const [file2, setFile2] = useState(null);
 
   const onImageChange1 = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -25,15 +25,17 @@ const Fusiooooon = () => {
     mergeImages([{ src: file1 }, { src: file2 }]).then((b64) => {
       setImgSrc(b64);
       console.log(b64);
-    });
 
-    axios({
-      method: "post",
-      url: `http://localhost:5000/img/merge`,
-      data: imgSrc,
-    })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      axios({
+        method: "post",
+        url: `http://localhost:5000/img/merge`,
+        data: {
+          image: b64,
+        },
+      })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    });
   };
 
   return (
