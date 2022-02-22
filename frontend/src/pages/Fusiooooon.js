@@ -10,13 +10,13 @@ const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
   const [file1, setFile1] = useState();
   const [file2, setFile2] = useState();
-  const [fusion, setFusion] = useState();
 
   const onImageChange1 = (event) => {
     if (event.target.files && event.target.files[0]) {
       setFile1(URL.createObjectURL(event.target.files[0]))
     }
    }
+
 
    const onImageChange2 = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -25,10 +25,9 @@ const Fusiooooon = () => {
    }
 
   const handleSubmit = (e) => {
-
     mergeImages([{ src: file1 }, { src: file2 }]).then(
               (b64) => {
-                setImgSrc(b64);
+                setImgSr(b64);
                 console.log(b64)
               },
     ) 
@@ -37,7 +36,7 @@ const Fusiooooon = () => {
     axios({
       method: "post",
       url: `http://localhost:5000/img/merge`,
-      data: fusion,
+      data: imgSrc,
     })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
