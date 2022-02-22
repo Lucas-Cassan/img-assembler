@@ -9,7 +9,6 @@ const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
   const [file1, setFile1] = useState();
   const [file2, setFile2] = useState();
-  const [fusion, setFusion] = useState();
 
   console.log(file1);
 
@@ -21,22 +20,18 @@ const Fusiooooon = () => {
             setImgSrc(b64);
           },
         );
-        setFusion(document.querySelector(".img").src);
-        console.log(fusion);
+        console.log(imgSrc);
       }
     }
-  }, [file1, file2, fusion]);
+  }, [file1, file2, imgSrc]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const data = new FormData();
-    // data.append("file", fusion);
-    // console.log(data);
 
     axios({
       method: "post",
       url: `http://localhost:5000/img/merge`,
-      data: fusion,
+      data: imgSrc,
     })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
