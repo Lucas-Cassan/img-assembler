@@ -4,6 +4,7 @@ import mergeImages from "merge-images";
 import body from "../img/body.png";
 import eyes from "../img/eyes.png";
 import mouth from "../img/mouth.png";
+import Draggable from 'react-draggable';
 
 const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
@@ -11,27 +12,27 @@ const Fusiooooon = () => {
   const [file2, setFile2] = useState();
   const [fusion, setFusion] = useState();
 
-  console.log(file1);
-
-  useEffect(() => {
-    if (file1 !== undefined && file2 !== undefined) {
-      if (file1.name && file2.name) {
-        mergeImages([{ src: body }, { src: eyes }, { src: mouth }]).then(
-          (b64) => {
-            setImgSrc(b64);
-          },
-        );
-        setFusion(document.querySelector(".img").src);
-        console.log(fusion);
-      }
+  const onImageChange1 = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      setFile1(URL.createObjectURL(event.target.files[0]))
     }
-  }, [file1, file2, fusion]);
+   }
+
+   const onImageChange2 = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      setFile2(URL.createObjectURL(event.target.files[0]))
+    }
+   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // const data = new FormData();
-    // data.append("file", fusion);
-    // console.log(data);
+
+    mergeImages([{ src: file1 }, { src: file2 }]).then(
+              (b64) => {
+                setImgSrc(b64);
+                console.log(b64)
+              },
+    ) 
+
 
     axios({
       method: "post",
@@ -45,7 +46,13 @@ const Fusiooooon = () => {
   return (
     <>
       <div id="image">
-        <img src={imgSrc} alt="" className="img" />
+      <Draggable
+          defaultPosition={{ x: 0, y: 0 }}
+          position={null}
+        >
+          <img src={imgSrc} alt="" className="img" />
+           </Draggable>
+        
       </div>
       <div id="form">
         <form action="" onSubmit={handleSubmit}>
@@ -55,7 +62,7 @@ const Fusiooooon = () => {
             name="image1"
             id="image1"
             accept=".jpg, .jpeg, .png"
-            onChange={(e) => setFile1(e.target.files[0])}
+            onChange={onImageChange1}
           />
           <input type="submit" value="enregistrer" />
         </form>
@@ -66,7 +73,7 @@ const Fusiooooon = () => {
             name="image2"
             id="image2"
             accept=".jpg, .jpeg, .png"
-            onChange={(e) => setFile2(e.target.files[0])}
+            onChange={onImageChange2}
           />
           <input type="submit" value="enregistrer" />
         </form>
