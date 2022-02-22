@@ -6,6 +6,7 @@ import eyes from "../img/eyes.png";
 import mouth from "../img/mouth.png";
 
 const Fusiooooon = () => {
+  const [imgSrc, setImgSrc] = useState(null);
   const [file1, setFile1] = useState();
   const [file2, setFile2] = useState();
   const [fusion, setFusion] = useState();
@@ -17,21 +18,20 @@ const Fusiooooon = () => {
       if (file1.name && file2.name) {
         mergeImages([{ src: body }, { src: eyes }, { src: mouth }]).then(
           (b64) => {
-            console.log(b64);
-            document.getElementById("img").src = b64;
+            setImgSrc(b64);
           },
         );
-        setFusion(document.getElementById("img").src);
-        console.log(document.getElementById("img").src);
+        setFusion(document.querySelector(".img").src);
+        console.log(fusion);
       }
     }
-  }, [file1, file2]);
+  }, [file1, file2, fusion]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = new FormData();
-    data.append("file", fusion);
-    console.log(data);
+    // const data = new FormData();
+    // data.append("file", fusion);
+    // console.log(data);
 
     axios({
       method: "post",
@@ -44,7 +44,9 @@ const Fusiooooon = () => {
 
   return (
     <>
-      <div id="image"></div>
+      <div id="image">
+        <img src={imgSrc} alt="" className="img" />
+      </div>
       <div id="form">
         <form action="" onSubmit={handleSubmit}>
           <label htmlFor="image1">Image 1</label>
@@ -70,7 +72,6 @@ const Fusiooooon = () => {
         </form>
       </div>
       <button onClick={handleSubmit}>FUSION</button>
-      <div id="img"></div>
     </>
   );
 };
