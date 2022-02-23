@@ -42,7 +42,30 @@ const Fusiooooon = () => {
     <>
       <div id="image">
         <Draggable defaultPosition={{ x: 0, y: 0 }} position={null}>
-          <img src={imgSrc} alt="" className="img" />
+          {
+            imgSrc===null ? 
+            <>
+            <div style={{height:'100%'}}>
+              <img src={file1} alt="" style={{
+                 float: 'left',
+                 maxWidth: '100%',
+                 borderRadius:'3px',
+                 maxHeight:'100%'
+              }}/>
+            
+              <img src={file2} alt="" style={{
+                width: '33.33%',
+                position: 'absolute',
+                left: '60%',
+                top:'40%',
+                transform: 'translate(-80%, -50%)'
+              }}/>
+              </div>
+            </>
+            :
+            <img src={imgSrc} alt="" className="img" />
+          }
+          
         </Draggable>
       </div>
       <div id="form">
