@@ -9,6 +9,12 @@ const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
   const [file1, setFile1] = useState(null);
   const [file2, setFile2] = useState(null);
+  const [position, setPosition] = useState({
+    x: 0,
+    y: 0,
+    width: 332,
+    height: 332,
+  });
 
   const onImageChange1 = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -24,7 +30,10 @@ const Fusiooooon = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mergeImages([{ src: file1 }, { src: file2 }]).then((b64) => {
+    mergeImages([
+      { src: file1 },
+      { src: file2, x: position.x, y: position.y },
+    ]).then((b64) => {
       setImgSrc(b64);
       console.log(b64);
 
@@ -40,30 +49,21 @@ const Fusiooooon = () => {
     });
   };
 
-   const StyledRnd = styled(Rnd)`
-     border: 4px dashed #548cff;
-   `;
+  const StyledRnd = styled(Rnd)`
+    border: 4px dashed #548cff;
+  `;
 
-   const Item = styled.div`
-     border: 5px solid black;
-   `;
+  const Item = styled.div`
+    border: 5px solid black;
+  `;
 
-   const Image = styled.div`
-     width: 100%;
-     height: 100%;
-     background-repeat: no-repeat;
-   `;
+  const Image = styled.div`
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  `;
 
-   const Container = styled.div`
-     
-   `;
-
-  const [position, setPosition] = useState({
-    x: 0,
-    y: 0,
-    width: 332,
-    height: 332,
-  });
+  const Container = styled.div``;
 
   function onResize(event, direction, ref, delta) {
     const { width, height } = ref.style;
@@ -83,7 +83,6 @@ const Fusiooooon = () => {
       y,
     }));
   }
-
 
   return (
     <>
