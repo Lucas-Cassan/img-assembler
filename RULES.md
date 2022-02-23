@@ -10,7 +10,7 @@ Avant de demander de l'aide, il vous faudra effectuer le strict minimum, à savo
 Lors des demandes d'aide, il est nécessaire d'effectuer des efforts de recherche avant de poser une question. Il est également requis, si vous démarrez un projet, d'avoir les bases du langage que vous utiliserez. Demander un bout de code prêt n'est pas autorisé, les membres étant ici pour vous guider, et non pour vous mâcher votre travail. Enfin, poser une question de langage alors que vous êtes déjà en train de développer votre projet est autorisé, du moment que la question porte sur le langage et non sur la fonctionnalité que vous implémentez.
 
 **4 `🔹` ឵឵ Néophytes**
-Les comportements moqueurs et irrespectueux envers les débutants en raison de leur ignorance sont prohibés. La bienveillance est de mise, et si vous n'avez pas la patience de répondre, ne le faites pas. Les néophytes doivent, en revanche, particulièrement respecter les règles #4 et #5.
+Les comportements moqueurs et irrespectueux envers les débutants en raison de leur ignorance sont prohibés. La bienveillance est de mise, et si vous n'avez pas la patience de répondre, ne le faites pas. Les néophytes doivent, en revanche, particulièrement respecter les règles.
 
 **5 `🔹` ឵឵ Signalements**
 Si vous êtes témoin de comportements anormaux, vous pouvez réagir avec :signalement: pour avertir la modération. Si vous avez besoin de vous entretenir avec un membre de l'équipe de modération pour une raison quelconque, vous pouvez ouvrir un canal de support avec la commande !newticket.
