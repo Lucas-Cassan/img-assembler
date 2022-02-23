@@ -34,7 +34,7 @@ Pour finir `fusionner` les deux images !
   Frontend : Ajout de la fonction de merge d'image et son parametrage. <br>
   GitHub : Gestion des branches git et des merges <br>
   👤 **Lucas Cassan** <br>
-  Frontend : UX/UI, amélioration des fonctionnalitées de la fusion d'image. <br>
+  Frontend : UI/UX, amélioration des fonctionnalitées de la fusion d'image. <br>
   GitHub : Création du projet sur GitHub<br>
   👤 **Clement Gras** <br>
   Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
