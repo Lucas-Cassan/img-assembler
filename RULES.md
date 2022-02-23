@@ -1,4 +1,6 @@
-### **`💻` ឵឵ Read The Docs**
+## 📎 Code de conduite - My Digital School Open Source.
+
+---
 
 **1 `🔹` ឵឵ Respect d'autrui**឵឵
 Respect d'autrui Vous devez le respect à chaque individu de la communauté, peu importe son niveau de hiérarchie. Les comportements immatures ou désobligeants ne sont pas autorisés. Les personnes apportant leur aide doivent faire preuve de patience, et les personnes demandant de l'aide devront faire des efforts.
