@@ -15,4 +15,4 @@ Lors des demandes d'aide, il est nécessaire d'effectuer des efforts de recherch
 Les comportements moqueurs et irrespectueux envers les débutants en raison de leur ignorance sont prohibés. La bienveillance est de mise, et si vous n'avez pas la patience de répondre, ne le faites pas. Les néophytes doivent, en revanche, particulièrement respecter les règles.
 
 **5 `🔹` ឵឵ Signalements**
-Si vous êtes témoin de comportements anormaux, vous pouvez réagir avec :signalement: pour avertir la modération. Si vous avez besoin de vous entretenir avec un membre de l'équipe de modération pour une raison quelconque, vous pouvez ouvrir un canal de support avec la commande !newticket.
+Si vous êtes témoin de comportements anormaux, vous pouvez réagir avec :signalement: pour avertir la modération.
