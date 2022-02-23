@@ -11,7 +11,7 @@
 
 ---
 
-Initialisation d'un projet sur l'open source, pratique de NPM package.
+Initialisation d'un projet sur l'open source.
 
 ### 💡 Bareme
 
