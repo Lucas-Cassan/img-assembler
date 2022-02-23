@@ -63,6 +63,6 @@ Pour finir `fusionner` les deux images !
 Pour lancer le projet :
 
 - Dans un terminal : lancer `npm run start_front`.
-- Ouvrir un deuxième terminal : lancer `npm run start_back`.
+- ~Ouvrir un deuxième terminal : lancer `npm run start_back`.~
 
 ---
