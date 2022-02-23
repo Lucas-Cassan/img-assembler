@@ -13,47 +13,47 @@
 
 Initialisation d'un projet sur l'open source, pratique de NPM package.
 
-### Bareme
+### 💡 Bareme
 
-- Fichier README.md (5 points) <br>
+- **_Fichier README.md_** (5 points) <br>
   Pouvoir lancer le projet en suivant la doc étape par étape <br>
   Mode de gouvernance choisi : Communautaire <br>
   Qui a fait quoi ? <br>
 
-  👤 *Guillaume Gruber* <br>
+  👤 **Guillaume Gruber** <br>
 
 - Frontend : Base du projet, avec les input d'image, et du bouton fusion avec ses fonctionnalitées. <br>
   pour envoyer l'image fusionner au backend. <br>
 - Backend : Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.<br>
 - BDD : Mise en place du serveur mongoDb. <br>
 
-  👤 *Mehdi Lamtargi* <br>
+  👤 **Mehdi Lamtargi** <br>
 
 - Frontend : Amélioration des fonctionnalitées, avec la perfection de la fusion d'image. <br>
 
-  👤 *Lucas Cassan* <br>
+  👤 **Lucas Cassan** <br>
 
 - Frontend : Design de l'application (SCSS), puis amélioration des fonctionnalitées de la fusion d'image. <br>
 
-  👤 *Clement Gras* <br>
+  👤 **Clement Gras** <br>
 
 - Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
 - Package : Ajout du package npm
 
-- Autres fichiers (3 points)<br>
+- **_Autres fichiers_** (3 points)<br>
   Licence<br>
   Code de conduite<br>
   Guide du contributeur : Améliorer ses compétences, se faire connaître<br>
 
-- Npm ou Composer (4 points)<br>
+- **_Npm ou Composer_** (4 points)<br>
   Publication de tout le projet ou une partie<br>
 
-- UI/UX (5 points)<br>
+- **_UI/UX_** (5 points)<br>
   Qualité du design<br>
   Facilité d’utilisation<br>
   Autres idées créatives<br>
 
-- Code (3 points)<br>
+- **_Code_** (3 points)<br>
   Qualité du code<br>
 
 ---
