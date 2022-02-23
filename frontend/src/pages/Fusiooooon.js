@@ -40,23 +40,28 @@ const Fusiooooon = () => {
 
   return (
     <>
-      <div id="image">
+      <div id="image" style={{textAlign:'center'}}>
         <Draggable defaultPosition={{ x: 0, y: 0 }} position={null}>
           {
             imgSrc===null ? 
             <>
             <div style={{height:'100%'}}>
               <img src={file1} alt="" style={{
-                 float: 'left',
                  maxWidth: '100%',
                  borderRadius:'3px',
-                 maxHeight:'100%'
-              }}/>
+                 maxHeight:'100%',
+                 position: 'relative',
+  top:' 50%',
+  bottom:'50%',
+  transform:' translate(0%, -50%)'
+              }}
+              id="FirstImg"
+              />
             
               <img src={file2} alt="" style={{
                 width: '33.33%',
                 position: 'absolute',
-                left: '60%',
+                left: '65%',
                 top:'40%',
                 transform: 'translate(-80%, -50%)'
               }}/>
