@@ -31,10 +31,10 @@ Pour finir `fusionner` les deux images !
   BDD : ~Mise en place du serveur mongoDb.~ <br>
   Autres fichiers : Création du ReadMe, Contribution, Règles <br>
   👤 **Mehdi Lamtargi** <br>
-  Frontend : Ajout de la fonction de merge d'image et son parametrage. <br>
+  Frontend : Ajout de la fonction de ~merge d'image~ screen image et son parametrage. <br>
   GitHub : Gestion des branches git et des merges <br>
   👤 **Lucas Cassan** <br>
-  Frontend : UI/UX, amélioration des fonctionnalitées de la fusion d'image. <br>
+  Frontend : UI/UX, amélioration des fonctionnalitées ~de la fusion~ du screen d'image. <br>
   GitHub : Création du projet sur GitHub<br>
   👤 **Clement Gras** <br>
   Backend : ~Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur.~ <br>
