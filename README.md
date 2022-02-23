@@ -22,7 +22,7 @@ Pour finir `fusionner` les deux images !
 
 **_Fichier README.md_** <br>
   - Pouvoir lancer le projet en suivant la doc étape par étape <br>
-  - Mode de gouvernance choisi : Communautaire <br>
+  - Mode de gouvernance choisi : `Communautaire` <br>
 
   - Qui a fait quoi ? <br>
   👤 **Guillaume Gruber** <br>
