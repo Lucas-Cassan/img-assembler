@@ -37,7 +37,7 @@ Pour finir `fusionner` les deux images !
   Frontend : UI/UX, amélioration des fonctionnalitées de la fusion d'image. <br>
   GitHub : Création du projet sur GitHub<br>
   👤 **Clement Gras** <br>
-  Backend : ~Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
+  Backend : ~Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur.~ <br>
   Interface CLI : Utilisation d'inquire pour lancer le projet
 
 **_Autres fichiers_** <br>
