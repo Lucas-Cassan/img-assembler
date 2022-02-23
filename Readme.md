@@ -18,23 +18,25 @@ Initialisation d'un projet sur l'open source, pratique de NPM package.
 - **_Fichier README.md_** (5 points) <br>
   Pouvoir lancer le projet en suivant la doc étape par étape <br>
   Mode de gouvernance choisi : Communautaire <br>
-  Qui a fait quoi ? <br>
 
+  Qui a fait quoi ? <br>
   **Guillaume Gruber** <br>
-  Frontend : Base du projet, avec les input d'image, et du bouton fusion avec ses fonctionnalitées. <br>
-  pour envoyer l'image fusionner au backend. <br>
+  Frontend : Base du projet, input d'image, et bouton fusion avec ses fonctionnalitées pour envoyer l'image fusionner au backend. <br>
   Backend : Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.<br>
   BDD : Mise en place du serveur mongoDb. <br>
+  Readme : Création du readme
 
   **Mehdi Lamtargi** <br>
-  Frontend : Amélioration des fonctionnalitées, avec la perfection de la fusion d'image. <br>
+  Frontend : Ajout de la fonction de merge d'image et son parametrage. <br>
+  GitHub : Gestion des branches git et des merges <br>
 
   **Lucas Cassan** <br>
-  Frontend : Design de l'application (SCSS), puis amélioration des fonctionnalitées de la fusion d'image. <br>
+  Frontend : UX/UI, amélioration des fonctionnalitées de la fusion d'image. <br>
+  GitHub : Création du projet sur GitHub
 
   **Clement Gras** <br>
   Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
-  Package : Ajout du package npm
+  Interface CLI : Utilisation d'inquire pour lancer le projet
 
 - **_Autres fichiers_** (3 points)<br>
   Licence<br>
