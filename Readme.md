@@ -46,7 +46,7 @@ Pour finir `fusionner` les deux images !
 - **_Autres fichiers_** (3 points)<br>
   License<br>
   Code de conduite<br>
-  Guide du contributeur : Améliorer ses compétences, se faire connaître<br>
+  Guide du contributeur<br>
 
 - **_Npm ou Composer_** (4 points)<br>
   Publication de tout le projet ou une partie<br>
