@@ -41,7 +41,6 @@ const Fusiooooon = () => {
   return (
     <>
       <div id="image" style={{textAlign:'center'}}>
-        <Draggable defaultPosition={{ x: 0, y: 0 }} position={null}>
           {
             imgSrc===null ? 
             <>
@@ -51,27 +50,33 @@ const Fusiooooon = () => {
                  borderRadius:'3px',
                  maxHeight:'100%',
                  position: 'relative',
-  top:' 50%',
-  bottom:'50%',
-  transform:' translate(0%, -50%)'
+                top:' 50%',
+                bottom:'50%',
+                transform:' translate(0%, -50%)'
               }}
               id="FirstImg"
               />
-            
+            <Draggable 
+              defaultPosition={{ x: 0, y: 0 }} 
+              onStart={()=>console.log("onstart")}
+              onDrag={()=>console.log("ondrag")}
+              onStop={()=>console.log("onstop")}
+              position={null}
+            >
               <img src={file2} alt="" style={{
                 width: '33.33%',
+                maxHeight:'90%',
                 position: 'absolute',
-                left: '65%',
+                left: '40%',
                 top:'40%',
-                transform: 'translate(-80%, -50%)'
+                transform: 'translate(0%, -20%)'
               }}/>
+            </Draggable>
               </div>
             </>
             :
             <img src={imgSrc} alt="" className="img" />
           }
-          
-        </Draggable>
       </div>
       <div id="form">
         <form action="">
