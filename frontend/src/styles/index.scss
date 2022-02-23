@@ -21,16 +21,32 @@ html{
             flex-direction: column;
 
             #image{
-                width: 750Px;
-                padding: 5px;
+                padding: 0;
                 height: 500px;
                 background-color: rgba($color: #FFF, $alpha: .5);
-                border-radius: 10px;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 overflow: hidden;
-
             }
-       
+            .btn{
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                cursor: pointer;
+                margin: 10px;
+                padding: 10px 20px;
+                font-size: 1.2em;
+                background-color: #548CFF;
+                color: white;
+                border-radius: 5px;
+                font-family: 'Roboto',
+                sans-serif;
+                text-transform: uppercase;
+                transition: all .3s ease-in-out;
+                border: 0;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #4578dd;
+                }
+            }
             #form{
                 height: 100px;
                 display: flex;

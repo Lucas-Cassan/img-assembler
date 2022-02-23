@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { createRef, useState } from "react";
 import axios from "axios";
 import mergeImages from "merge-images";
 import styled from "styled-components";
 import { Rnd } from "react-rnd";
 import StyledRect from "react-resizable-rotatable-draggable";
+import { useScreenshot } from "use-react-screenshot";
 
 const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
   const [file1, setFile1] = useState(null);
   const [file2, setFile2] = useState(null);
+  const ref = createRef(null);
+  const [image, takeScreenshot] = useScreenshot();
+  const getImage = () => {
+    takeScreenshot(ref.current);
+
+  }
+
   const [position, setPosition] = useState({
     x: 0,
     y: 0,
@@ -49,9 +57,7 @@ const Fusiooooon = () => {
     });
   };
 
-  const StyledRnd = styled(Rnd)`
-    border: 4px dashed #548cff;
-  `;
+  const StyledRnd = styled(Rnd)``;
 
   const Item = styled.div`
     border: 5px solid black;
@@ -84,9 +90,13 @@ const Fusiooooon = () => {
     }));
   }
 
+  function downloadImage(){
+    getImage();
+  }
+
   return (
     <>
-      <Container id="image" style={{ textAlign: "center" }}>
+      <Container ref={ref} id="image" style={{ textAlign: "center" }}>
         {imgSrc === null ? (
           <>
             <div style={{ height: "100%" }}>
@@ -123,7 +133,7 @@ const Fusiooooon = () => {
                     backgroundImage: `url(` + file2 + `)`,
                   }}
                 >
-                  {JSON.stringify(position, null, 2)}
+                  {/* {JSON.stringify(position, null, 2)} */}
                 </Image>
               </StyledRnd>
             </div>
@@ -156,7 +166,16 @@ const Fusiooooon = () => {
           <input type="submit" value="enregistrer" />
         </form>
       </div>
-      <button onClick={handleSubmit}>FUSION</button>
+      <button
+        className="btn"
+        style={{ marginBottom: "10px" }}
+        onClick={getImage}
+      >
+        Télécharger
+      </button>
+      <a onClick={getImage} download={image} href={image} title="MixPic">
+        <img alt="MixPic" src={image} width={100} />
+      </a>
     </>
   );
 };
