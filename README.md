@@ -27,9 +27,9 @@ Pour finir `fusionner` les deux images !
   - Qui a fait quoi ? <br>
   👤 **Guillaume Gruber** <br>
   Frontend : Base du projet, input d'image, et bouton fusion avec ses fonctionnalitées pour envoyer l'image fusionner au backend. <br>
-  Backend : Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.<br>
-  BDD : Mise en place du serveur mongoDb. <br>
-  Readme : Création du readme <br>
+  Backend : ~Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.~ <br>
+  BDD : ~Mise en place du serveur mongoDb.~ <br>
+  Autres fichiers : Création du ReadMe, Contribution, Règles <br>
   👤 **Mehdi Lamtargi** <br>
   Frontend : Ajout de la fonction de merge d'image et son parametrage. <br>
   GitHub : Gestion des branches git et des merges <br>
