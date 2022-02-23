@@ -11,7 +11,7 @@
 
 ---
 
-### 🖥 **Principe d'utilisation**
+### 🖥   **Principe d'utilisation**
 
 Le but du projet est la fusion d'image, pour se faire, sélectionner une `première image` qui servira de fond, ensuite sélectionner une `deuxième image` que vous pouvez redimensionner.
 Pour finir `fusionner` les deux images !
