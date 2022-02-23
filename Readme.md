@@ -19,16 +19,24 @@ Initialisation d'un projet sur l'open source, pratique de NPM package.
   Pouvoir lancer le projet en suivant la doc étape par étape <br>
   Mode de gouvernance choisi : Communautaire <br>
   Qui a fait quoi ? <br>
+
   👤 *Guillaume Gruber* <br>
+
 - Frontend : Base du projet, avec les input d'image, et du bouton fusion avec ses fonctionnalitées. <br>
   pour envoyer l'image fusionner au backend. <br>
 - Backend : Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.<br>
 - BDD : Mise en place du serveur mongoDb. <br>
+
   👤 *Mehdi Lamtargi* <br>
+
 - Frontend : Amélioration des fonctionnalitées, avec la perfection de la fusion d'image. <br>
+
   👤 *Lucas Cassan* <br>
+
 - Frontend : Design de l'application (SCSS), puis amélioration des fonctionnalitées de la fusion d'image. <br>
+
   👤 *Clement Gras* <br>
+
 - Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
 
 - Autres fichiers (3 points)<br>
