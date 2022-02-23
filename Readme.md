@@ -20,7 +20,7 @@ Pour finir `fusionner` les deux images !
 
 ### 💡 Bareme
 
-- **_Fichier README.md_** (5 points) <br>
+- **_Fichier README.md_** <br>
   Pouvoir lancer le projet en suivant la doc étape par étape <br>
   Mode de gouvernance choisi : Communautaire <br>
 
@@ -43,20 +43,20 @@ Pour finir `fusionner` les deux images !
   Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
   Interface CLI : Utilisation d'inquire pour lancer le projet
 
-- **_Autres fichiers_** (3 points)<br>
+- **_Autres fichiers_** <br>
   License<br>
   Code de conduite<br>
   Guide du contributeur<br>
 
-- **_Npm ou Composer_** (4 points)<br>
+- **_Npm ou Composer_** <br>
   Publication de tout le projet ou une partie<br>
 
-- **_UI/UX_** (5 points)<br>
+- **_UI/UX_** <br>
   Qualité du design<br>
   Facilité d’utilisation<br>
   Autres idées créatives<br>
 
-- **_Code_** (3 points)<br>
+- **_Code_** <br>
   Qualité du code<br>
 
 ---
