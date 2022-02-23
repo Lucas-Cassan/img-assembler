@@ -1,3 +1,7 @@
+## 📎 Guide du contributer - My Digital School Open Source.
+
+---
+
 ### Améliorer les compétences existantes
 
 Que ce soit le codage, la conception de l’interface utilisateur, la conception graphique, la rédaction ou l’organisation, si vous cherchez de la pratique, il y a une tâche pour vous sur un projet open source.
