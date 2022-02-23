@@ -1,4 +1,4 @@
-## 📎 Guide du contributer - My Digital School Open Source.
+## 📎 Guide du contributeur - My Digital School Open Source.
 
 ---
 
