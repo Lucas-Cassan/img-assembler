@@ -39,7 +39,7 @@ Initialisation d'un projet sur l'open source, pratique de NPM package.
   Interface CLI : Utilisation d'inquire pour lancer le projet
 
 - **_Autres fichiers_** (3 points)<br>
-  Licence<br>
+  License<br>
   Code de conduite<br>
   Guide du contributeur : Améliorer ses compétences, se faire connaître<br>
 
