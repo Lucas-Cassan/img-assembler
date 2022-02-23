@@ -38,6 +38,7 @@ Initialisation d'un projet sur l'open source, pratique de NPM package.
   👤 *Clement Gras* <br>
 
 - Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur. <br>
+- Package : Ajout du package npm
 
 - Autres fichiers (3 points)<br>
   Licence<br>
