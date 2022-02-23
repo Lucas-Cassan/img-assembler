@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import mergeImages from "merge-images";
-import Draggable from "react-draggable";
+import styled from "styled-components";
+import { Rnd } from "react-rnd";
+import StyledRect from "react-resizable-rotatable-draggable";
 
 const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
@@ -38,46 +40,99 @@ const Fusiooooon = () => {
     });
   };
 
+   const StyledRnd = styled(Rnd)`
+     border: 4px dashed #548cff;
+   `;
+
+   const Item = styled.div`
+     border: 5px solid black;
+   `;
+
+   const Image = styled.div`
+     width: 100%;
+     height: 100%;
+     background-repeat: no-repeat;
+   `;
+
+   const Container = styled.div`
+     
+   `;
+
+  const [position, setPosition] = useState({
+    x: 0,
+    y: 0,
+    width: 332,
+    height: 332,
+  });
+
+  function onResize(event, direction, ref, delta) {
+    const { width, height } = ref.style;
+
+    setPosition((prevPosition) => ({
+      ...prevPosition,
+      width,
+      height,
+    }));
+  }
+
+  function onDragStop(e, d) {
+    const { x, y } = d;
+    setPosition((prevPosition) => ({
+      ...prevPosition,
+      x,
+      y,
+    }));
+  }
+
+
   return (
     <>
-      <div id="image" style={{textAlign:'center'}}>
-          {
-            imgSrc===null ? 
-            <>
-            <div style={{height:'100%'}}>
-              <img src={file1} alt="" style={{
-                 maxWidth: '100%',
-                 borderRadius:'3px',
-                 maxHeight:'100%',
-                 position: 'relative',
-                top:' 50%',
-                bottom:'50%',
-                transform:' translate(0%, -50%)'
-              }}
-              id="FirstImg"
+      <Container id="image" style={{ textAlign: "center" }}>
+        {imgSrc === null ? (
+          <>
+            <div style={{ height: "100%" }}>
+              <img
+                src={file1}
+                alt=""
+                style={{
+                  maxWidth: "100%",
+                  borderRadius: "3px",
+                  maxHeight: "100%",
+                  position: "relative",
+                  top: " 50%",
+                  bottom: "50%",
+                  transform: " translate(0%, -50%)",
+                }}
+                id="FirstImg"
               />
-            <Draggable 
-              defaultPosition={{ x: 0, y: 0 }} 
-              onStart={()=>console.log("onstart")}
-              onDrag={()=>console.log("ondrag")}
-              onStop={()=>console.log("onstop")}
-              position={null}
-            >
-              <img src={file2} alt="" style={{
-                width: '33.33%',
-                maxHeight:'90%',
-                position: 'absolute',
-                left: '40%',
-                top:'40%',
-                transform: 'translate(0%, -20%)'
-              }}/>
-            </Draggable>
-              </div>
-            </>
-            :
-            <img src={imgSrc} alt="" className="img" />
-          }
-      </div>
+              <StyledRnd
+                style={{
+                  width: "33.33%",
+                  position: "absolute",
+                  left: "40%",
+                  top: "40%",
+                  transform: "translate(0%, -20%)!important",
+                }}
+                default={position}
+                onResize={onResize}
+                onDragStop={onDragStop}
+                bounds="parent"
+                lockAspectRatio={true}
+              >
+                <Image
+                  style={{
+                    backgroundImage: `url(` + file2 + `)`,
+                  }}
+                >
+                  {JSON.stringify(position, null, 2)}
+                </Image>
+              </StyledRnd>
+            </div>
+          </>
+        ) : (
+          <img src={imgSrc} alt="" className="img" />
+        )}
+      </Container>
       <div id="form">
         <form action="">
           <label htmlFor="image1">Image 1</label>
