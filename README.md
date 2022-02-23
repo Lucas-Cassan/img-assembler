@@ -27,8 +27,8 @@ Pour finir `fusionner` les deux images !
   - Qui a fait quoi ? <br>
   👤 **Guillaume Gruber** <br>
   Frontend : Base du projet, input d'image, et création des fonctionnalitées pour le bouton fusionner. <br>
-  Backend : ~Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.~ <br>
-  BDD : ~Mise en place du serveur mongoDb.~ <br>
+  ~Backend : Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.~ <br>
+  ~BDD : Mise en place du serveur mongoDb.~ <br>
   Autres fichiers : Création du ReadMe, Contribution, Règles <br>
   👤 **Mehdi Lamtargi** <br>
   Frontend : Ajout de la fonction de ~merge d'image~ screen image et son parametrage. <br>
@@ -37,7 +37,7 @@ Pour finir `fusionner` les deux images !
   Frontend : UI/UX, amélioration des fonctionnalitées ~de la fusion~ du screen d'image. <br>
   GitHub : Création du projet sur GitHub<br>
   👤 **Clement Gras** <br>
-  Backend : ~Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur.~ <br>
+  ~Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur.~ <br>
   Interface CLI : Utilisation d'inquire pour lancer le projet
 
 **_Autres fichiers_** <br>
