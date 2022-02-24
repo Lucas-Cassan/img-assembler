@@ -62,6 +62,6 @@ Pour finir `téléchargez` la fusion des deux images !
 
 Pour lancer le projet :
 
-- Dans un terminal : lancer `npm run start_front`.
+- Dans un terminal : lancer `npm i` si c'est votre première installation, puis `npm start` pour lancer le projet.
 
 ---
