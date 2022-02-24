@@ -26,7 +26,7 @@ Pour finir `téléchargez` la fusion des deux images !
 
   - Qui a fait quoi ? <br>
   👤 **Guillaume Gruber** <br>
-  Frontend : Base du projet, input d'image, et création des fonctionnalitées pour le bouton fusionner. <br>
+  Frontend : Input d'image, et création des fonctionnalitées pour le bouton télécharger. <br>
   ~Backend : Base du projet, avec la mise en place de route puis la récupération de l'image du frontend.~ <br>
   ~BDD : Mise en place du serveur mongoDb.~ <br>
   Autres fichiers : Création du ReadMe, Contribution, Règles <br>
