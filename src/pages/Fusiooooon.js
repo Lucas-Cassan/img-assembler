@@ -53,7 +53,6 @@ const Fusiooooon = () => {
   `;
   const Container = styled.div``;
 
-
   // --- Function
   const onDragStop = (e, d) => {
     const { x, y } = d;
@@ -61,7 +60,6 @@ const Fusiooooon = () => {
       ...prevPosition,
       x,
       y,
-  
     }));
   };
   const handleChangeWidth = (e) => {
@@ -76,7 +74,6 @@ const Fusiooooon = () => {
       height: e.target.value,
     }));
   };
-  console.log(rotate);
 
   return (
     <>
@@ -149,35 +146,37 @@ const Fusiooooon = () => {
           <input type="submit" value="enregistrer" />
         </form>
       </div>
-      <div className="image-parameters">
-        <div className="input">
-          <label htmlFor="size">Size</label>
-          <input
-            type="number"
-            name="size"
-            id="size"
-            onChange={handleChangeWidth}
-          />
+      {file2 && (
+        <div className="image-parameters">
+          <div className="input">
+            <label htmlFor="size">Width</label>
+            <input
+              type="number"
+              name="size"
+              id="size"
+              onChange={handleChangeWidth}
+            />
+          </div>
+          <div className="input">
+            <label htmlFor="size">Height</label>
+            <input
+              type="number"
+              name="size"
+              id="size"
+              onChange={handleChangeHeigth}
+            />
+          </div>
+          <div className="input">
+            <label htmlFor="rotation">Rotation</label>
+            <input
+              type="number"
+              name="rotation"
+              id="rotation"
+              onChange={(e) => setRotate(e.target.value)}
+            />
+          </div>
         </div>
-        <div className="input">
-          <label htmlFor="size">Size</label>
-          <input
-            type="number"
-            name="size"
-            id="size"
-            onChange={handleChangeHeigth}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="rotation">Rotation</label>
-          <input
-            type="number"
-            name="rotation"
-            id="rotation"
-            onChange={(e) => setRotate(e.target.value)}
-          />
-        </div>
-      </div>
+      )}
       {file1 && file2 && (
         <>
           <button
@@ -185,7 +184,7 @@ const Fusiooooon = () => {
             style={{ marginBottom: "10px" }}
             onClick={downloadimage}
           >
-            Télécharger
+            Download
           </button>
         </>
       )}
