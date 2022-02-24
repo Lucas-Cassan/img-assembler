@@ -6,10 +6,19 @@ import { saveAs } from "file-saver";
 import { useEffect } from "react";
 
 const Fusiooooon = () => {
+  // Image
   const [file1, setFile1] = useState(null);
   const [file2, setFile2] = useState(null);
+  // Screen
   const ref = createRef(null);
   const [image, takeScreenshot] = useScreenshot();
+  // Move and resize image
+  const [position, setPosition] = useState({
+    x: 0,
+    y: 0,
+    width: 200,
+    height: 200,
+  });
 
   useEffect(() => {
     if (image) {
@@ -17,49 +26,43 @@ const Fusiooooon = () => {
     }
   }, [image]);
 
+  // --- Image
   const downloadimage = async () => {
     takeScreenshot(ref.current);
   };
-
-  const [position, setPosition] = useState({
-    x: 0,
-    y: 0,
-    width: 332,
-    height: 332,
-  });
-
   const onImageChange1 = (event) => {
     if (event.target.files && event.target.files[0]) {
       setFile1(URL.createObjectURL(event.target.files[0]));
     }
   };
-
   const onImageChange2 = (event) => {
     if (event.target.files && event.target.files[0]) {
       setFile2(URL.createObjectURL(event.target.files[0]));
     }
   };
 
+  // --- Component styles
   const StyledRnd = styled(Rnd)``;
-
   const Image = styled.div`
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
+    background-image: url(${file2});
+    background-size: 100% 100%;
+  `;
+  const Container = styled.div`
+    width: 800px;
+    height: 800px;
   `;
 
-  const Container = styled.div``;
-
+  // --- Function
   function onResize(event, direction, ref, delta) {
     const { width, height } = ref.style;
-
     setPosition((prevPosition) => ({
       ...prevPosition,
       width,
       height,
     }));
   }
-
   function onDragStop(e, d) {
     const { x, y } = d;
     setPosition((prevPosition) => ({
@@ -101,13 +104,7 @@ const Fusiooooon = () => {
             bounds="parent"
             lockAspectRatio={true}
           >
-            <Image
-              style={{
-                backgroundImage: `url(` + file2 + `)`,
-              }}
-            >
-              {/* {JSON.stringify(position, null, 2)} */}
-            </Image>
+            <Image>{/* {JSON.stringify(position, null, 2)} */}</Image>
           </StyledRnd>
         </div>
       </Container>
