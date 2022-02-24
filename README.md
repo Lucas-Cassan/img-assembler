@@ -38,8 +38,8 @@ Pour finir `téléchargez` la fusion des deux images !
   GitHub : Création du projet sur GitHub<br>
   👤 **Clement Gras** <br>
   ~Backend : Ajout de la fonctionnalitée permettant de stocker l'image sur le serveur.~ <br>
-  Interface CLI : Utilisation d'inquire pour lancer le projet
-
+  ~Interface CLI : Utilisation d'inquire pour lancer le projet~
+  
 **_Autres fichiers_** <br>
   - License<br>
   - Code de conduite<br>
