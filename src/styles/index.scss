@@ -1,166 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 html {
+  padding: 0;
+  margin: 0;
+
+  body {
     padding: 0;
     margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #faeee7;
 
-    body {
+    #root {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #image {
+        width: 750px;
         padding: 0;
-        margin: 0;
-        width: 100vw;
-        height: 100vh;
+        height: 500px;
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         overflow: hidden;
-        background-color: #FAEEE7;
+      }
 
-        #root {
+      .auto-image {
+        width: auto !important;
+      }
+
+      .btn {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        cursor: pointer;
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background-color: #548cff;
+        color: white;
+        border-radius: 5px;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #4578dd;
+        }
+      }
+
+      .btn.download {
+        position: absolute;
+        bottom: 10px;
+      }
+
+      #form {
+        position: absolute;
+        top: 20px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        input {
+          display: none;
+        }
+
+        label {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+          cursor: pointer;
+          margin: 10px;
+          padding: 10px 20px;
+          font-size: 1.2em;
+          background-color: #548cff;
+          color: white;
+          border-radius: 5px;
+          font-family: "Roboto", sans-serif;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: #4578dd;
+          }
+        }
+      }
+
+      .image-parameters {
+        margin-top: 2%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .input {
+          color: rgb(19, 19, 19);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 60px;
+          width: 33.33%;
+
+          .range {
+            -webkit-appearance: none;
+            /*nécessaire pour Chrome */
+            padding: 0;
+            /* nécessaire pour IE */
+            font: inherit;
+            /* même rendu suivant font document */
+            outline: none;
+            color: #069;
+            /* sert pour couleur de référence, via currentColor, pour le curseur */
+            opacity: 0.8;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            height: 35px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* sert pour couleur de fond de la zone de déplacement */
+            box-sizing: border-box;
+            /* même modèle de boîte pour tous */
+            transition: opacity 0.2s;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 75%;
+
+            outline: none;
+            padding: 2px 5px;
+          }
+          input {
+            text-align: center;
+            height: 30px;
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 5px;
+            outline: none;
+            padding: 2px 5px;
+          }
+          label {
+            height: 20px;
+            margin-bottom: 10px;
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
             width: 100%;
-            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-
-            #image {
-                width: 750px;
-                padding: 0;
-                height: 500px;
-                background-color: rgba($color: #FFF, $alpha: .5);
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                overflow: hidden;
-            }
-
-            .auto-image {
-                width: auto !important;
-            }
-
-            .btn {
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-                cursor: pointer;
-                margin: 10px;
-                padding: 10px 20px;
-                font-size: 1.2em;
-                background-color: #548CFF;
-                color: white;
-                border-radius: 5px;
-                font-family: 'Roboto',
-                    sans-serif;
-                text-transform: uppercase;
-                transition: all .3s ease-in-out;
-                border: 0;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #4578dd;
-                }
-            }
-
-            .btn.download {
-                position: absolute;
-                bottom: 10px;
-            }
-
-            #form {
-                
-                height: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-
-                input {
-                    display: none;
-                }
-
-                label {
-                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-                    cursor: pointer;
-                    margin: 10px;
-                    padding: 10px 20px;
-                    font-size: 1.2em;
-                    background-color: #548CFF;
-                    color: white;
-                    border-radius: 5px;
-                    font-family: 'Roboto', sans-serif;
-                    text-transform: uppercase;
-                    transition: all .3s ease-in-out;
-
-                    &:hover {
-                        background-color: #4578dd;
-                    }
-                }
-            }
-
-            .image-parameters {
-                margin-top: 2%;
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-               .input{
-                   color: rgb(19, 19, 19);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    height: 60px;
-                    width: 33.33%;
-
-                    .range{
-                         -webkit-appearance: none;
-                         /*nécessaire pour Chrome */
-                         padding: 0;
-                         /* nécessaire pour IE */
-                         font: inherit;
-                         /* même rendu suivant font document */
-                         outline: none;
-                         color: #069;
-                         /* sert pour couleur de référence, via currentColor, pour le curseur */
-                         opacity: .8;
-                         background-color: rgba($color: #FFF, $alpha: .5);
-                        height: 35px;
-                         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                         /* sert pour couleur de fond de la zone de déplacement */
-                         box-sizing: border-box;
-                         /* même modèle de boîte pour tous */
-                         transition: opacity .2s;
-                         cursor: pointer;
-                         border-radius: 5px;
-                         width: 75%;
-                    
-                         outline: none;
-                         padding: 2px 5px;
-                    }
-                    input{
-                        text-align: center;
-                        height: 30px;
-                        width: 75%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border: 0;
-                        background-color: rgba($color: #FFF, $alpha: .5);
-                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                        border-radius: 5px;
-                        outline: none;
-                        padding: 2px 5px;
-                    }
-                    label{
-                        height: 20px;
-                        margin-bottom: 10px;
-                        font-family: 'Roboto',
-                        sans-serif;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-               }
-
-            }
+          }
         }
-
+      }
     }
+  }
 }
