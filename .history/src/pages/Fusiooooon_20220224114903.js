@@ -150,33 +150,22 @@ const Fusiooooon = () => {
         </form>
       </div>
       <div className="image-parameters">
-        <div className="input">
-          <label htmlFor="size">Size</label>
-          <input
-            type="number"
-            name="size"
-            id="size"
-            onChange={handleChangeWidth}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="size">Size</label>
-          <input
-            type="number"
-            name="size"
-            id="size"
-            onChange={handleChangeHeigth}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="rotation">Rotation</label>
-          <input
-            type="number"
-            name="rotation"
-            id="rotation"
-            onChange={(e) => setRotate(e.target.value)}
-          />
-        </div>
+        <label htmlFor="size">Size</label>
+        <input type="number" name="size" id="size" onChange={handleChangeWidth} />
+        <label htmlFor="size">Size</label>
+        <input
+          type="number"
+          name="size"
+          id="size"
+          onChange={handleChangeHeigth}
+        />
+        <label htmlFor="rotation">Rotation</label>
+        <input
+          type="number"
+          name="rotation"
+          id="rotation"
+          onChange={(e) => setRotate(e.target.value)}
+        />
       </div>
       {file1 && file2 && (
         <>

@@ -53,7 +53,6 @@ const Fusiooooon = () => {
   `;
   const Container = styled.div``;
 
-
   // --- Function
   const onDragStop = (e, d) => {
     const { x, y } = d;
@@ -61,7 +60,6 @@ const Fusiooooon = () => {
       ...prevPosition,
       x,
       y,
-  
     }));
   };
   const handleChangeWidth = (e) => {
@@ -80,12 +78,7 @@ const Fusiooooon = () => {
 
   return (
     <>
-      <Container
-        ref={ref}
-        id="image"
-        style={{ textAlign: "center" }}
-        className={`${file1 ? "auto-image" : ""}`}
-      >
+      <Container ref={ref} id="image" style={{ textAlign: "center" }}>
         <div style={{ height: "100%" }}>
           <img
             src={file1}
@@ -150,33 +143,22 @@ const Fusiooooon = () => {
         </form>
       </div>
       <div className="image-parameters">
-        <div className="input">
-          <label htmlFor="size">Size</label>
-          <input
-            type="number"
-            name="size"
-            id="size"
-            onChange={handleChangeWidth}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="size">Size</label>
-          <input
-            type="number"
-            name="size"
-            id="size"
-            onChange={handleChangeHeigth}
-          />
-        </div>
-        <div className="input">
-          <label htmlFor="rotation">Rotation</label>
-          <input
-            type="number"
-            name="rotation"
-            id="rotation"
-            onChange={(e) => setRotate(e.target.value)}
-          />
-        </div>
+        <label htmlFor="size">Size</label>
+        <input type="text" name="size" id="size" onChange={handleChangeWidth} />
+        <label htmlFor="size">Size</label>
+        <input
+          type="text"
+          name="size"
+          id="size"
+          onChange={handleChangeHeigth}
+        />
+        <label htmlFor="rotation">Rotation</label>
+        <input
+          type="text"
+          name="rotation"
+          id="rotation"
+          onChange={(e) => setRotate(e.target.value)}
+        />
       </div>
       {file1 && file2 && (
         <>
