@@ -62,7 +62,7 @@ Pour finir `téléchargez` la fusion des deux images !
 
 Pour lancer le projet :
 
-- Dans un terminal : Créer un dossier, puis lancer `npm init` suivi de `npm i img-fusion` si c'est votre première installation, ensuite faites un `cd node_modules/img-fusion` et pour lancer le projet `npm start`.
+- Dans un terminal : Créer un dossier, puis lancer `npm init` suivi de `npm i img-fusion` si c'est votre première installation, ensuite faites un `cd node_modules/img-fusion` puis lancer le projet avec `npm start`.
 - Sinon cloner le repo `https://github.com/Lucas-Cassan/img-assembler` puis dans un terminal lancer `npm install` puis `npm start`
 
 ---
