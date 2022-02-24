@@ -60,7 +60,6 @@ html {
             }
 
             #form {
-                
                 height: 100px;
                 display: flex;
                 justify-content: center;
@@ -91,14 +90,12 @@ html {
             }
 
             .image-parameters {
-                margin-top: 2%;
                 width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
                .input{
-                   color: rgb(19, 19, 19);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -117,19 +114,12 @@ html {
                          color: #069;
                          /* sert pour couleur de référence, via currentColor, pour le curseur */
                          opacity: .8;
-                         background-color: rgba($color: #FFF, $alpha: .5);
-                        height: 35px;
-                         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                         background: #CCC;
                          /* sert pour couleur de fond de la zone de déplacement */
                          box-sizing: border-box;
                          /* même modèle de boîte pour tous */
                          transition: opacity .2s;
                          cursor: pointer;
-                         border-radius: 5px;
-                         width: 75%;
-                    
-                         outline: none;
-                         padding: 2px 5px;
                     }
                     input{
                         text-align: center;

@@ -77,30 +77,6 @@ const Fusiooooon = () => {
 
   return (
     <>
-      <div id="form">
-        <form action="">
-          <label htmlFor="image1">Image 1</label>
-          <input
-            type="file"
-            name="image1"
-            id="image1"
-            accept=".jpg, .jpeg, .png"
-            onChange={onImageChange1}
-          />
-          <input type="submit" value="enregistrer" />
-        </form>
-        <form action="">
-          <label htmlFor="image2">Image 2</label>
-          <input
-            type="file"
-            name="image2"
-            id="image2"
-            accept=".jpg, .jpeg, .png"
-            onChange={onImageChange2}
-          />
-          <input type="submit" value="enregistrer" />
-        </form>
-      </div>
       <Container
         ref={ref}
         id="image"
@@ -146,7 +122,30 @@ const Fusiooooon = () => {
           </StyledRnd>
         </div>
       </Container>
-
+      <div id="form">
+        <form action="">
+          <label htmlFor="image1">Image 1</label>
+          <input
+            type="file"
+            name="image1"
+            id="image1"
+            accept=".jpg, .jpeg, .png"
+            onChange={onImageChange1}
+          />
+          <input type="submit" value="enregistrer" />
+        </form>
+        <form action="">
+          <label htmlFor="image2">Image 2</label>
+          <input
+            type="file"
+            name="image2"
+            id="image2"
+            accept=".jpg, .jpeg, .png"
+            onChange={onImageChange2}
+          />
+          <input type="submit" value="enregistrer" />
+        </form>
+      </div>
       {file2 && (
         <div className="image-parameters">
           <div className="input">
@@ -170,12 +169,12 @@ const Fusiooooon = () => {
           <div className="input">
             <label htmlFor="rotation">Rotation</label>
             <input
-              className="range"
               type="range"
               name="rotation"
               id="rotation"
-              min="-360"
-              max="360"
+              min="-180"
+              max="180"
+              value="0"
               onChange={(e) => setRotate(e.target.value)}
             />
           </div>
