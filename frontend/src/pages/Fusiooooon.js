@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Rnd } from "react-rnd";
 import StyledRect from "react-resizable-rotatable-draggable";
 import { useScreenshot } from "use-react-screenshot";
+import { saveAs } from "file-saver";
 
 const Fusiooooon = () => {
   const [imgSrc, setImgSrc] = useState(null);
@@ -12,9 +13,10 @@ const Fusiooooon = () => {
   const [file2, setFile2] = useState(null);
   const ref = createRef(null);
   const [image, takeScreenshot] = useScreenshot();
-  const getImage = () => {
-    takeScreenshot(ref.current);
 
+  function downloadimage(){
+    takeScreenshot(ref.current);
+    saveAs(image, "MicPicture");
   }
 
   const [position, setPosition] = useState({
@@ -36,32 +38,7 @@ const Fusiooooon = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    mergeImages([
-      { src: file1 },
-      { src: file2, x: position.x, y: position.y },
-    ]).then((b64) => {
-      setImgSrc(b64);
-      console.log(b64);
-
-      axios({
-        method: "post",
-        url: `http://localhost:5000/img/merge`,
-        data: {
-          image: b64,
-        },
-      })
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
-    });
-  };
-
   const StyledRnd = styled(Rnd)``;
-
-  const Item = styled.div`
-    border: 5px solid black;
-  `;
 
   const Image = styled.div`
     width: 100%;
@@ -89,10 +66,7 @@ const Fusiooooon = () => {
       y,
     }));
   }
-
-  function downloadImage(){
-    getImage();
-  }
+  
 
   return (
     <>
@@ -166,16 +140,17 @@ const Fusiooooon = () => {
           <input type="submit" value="enregistrer" />
         </form>
       </div>
-      <button
-        className="btn"
-        style={{ marginBottom: "10px" }}
-        onClick={getImage}
-      >
-        Télécharger
-      </button>
-      <a onClick={getImage} download={image} href={image} title="MixPic">
-        <img alt="MixPic" src={image} width={100} />
-      </a>
+      {file1 && file2 && (
+        <>
+          <button
+            className="btn"
+            style={{ marginBottom: "10px" }}
+            onClick={downloadimage}
+          >
+            Télécharger
+          </button>
+        </>
+      )}
     </>
   );
 };
