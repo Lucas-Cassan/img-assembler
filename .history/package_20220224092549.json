@@ -1,7 +1,7 @@
 {
   "name": "image-assembler",
   "version": "0.2.0",
-  "private": false,
+  "private": true,
   "main": "index.js",
   "description": "Application to fusion image",
   "author": "Lucas Cassan, Guillaume Gruber, Mehdi Lamtargi, Clément Gras",
