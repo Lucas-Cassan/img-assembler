@@ -60,7 +60,8 @@ html {
             }
 
             #form {
-                
+                position: absolute;
+                bottom: 10px;
                 height: 100px;
                 display: flex;
                 justify-content: center;
@@ -91,7 +92,6 @@ html {
             }
 
             .image-parameters {
-                margin-top: 2%;
                 width: 50%;
                 display: flex;
                 justify-content: center;
@@ -118,7 +118,7 @@ html {
                          /* sert pour couleur de référence, via currentColor, pour le curseur */
                          opacity: .8;
                          background-color: rgba($color: #FFF, $alpha: .5);
-                        height: 35px;
+                        height: 30px;
                          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                          /* sert pour couleur de fond de la zone de déplacement */
                          box-sizing: border-box;
